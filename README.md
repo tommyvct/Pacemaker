@@ -61,8 +61,11 @@ The currect solution still works, but there is no guarantee that it will work on
 
 ## Credit
 https://stackoverflow.com/a/1610140
+
 https://stackoverflow.com/a/34956412
+
 https://www.codeproject.com/Articles/30031/Query-hardware-device-status-in-C
+
 https://github.com/anatoliis/PWMHelper
 
 And the [Microsoft Docs](https://docs.microsoft.com/)! Though some of the documentation lacks practical example.
