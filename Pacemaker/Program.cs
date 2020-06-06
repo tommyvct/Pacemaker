@@ -56,9 +56,9 @@ namespace Pacemaker
                     }
 
                     if (dev[0] == "PWM")
-                    {
+                    {  
                         // TODO: PWM
-                        _ = PWMHelper.Program.PWM(new string[] { dev[1] }); // set freq
+                        PWMHelper.Program.PWM(new string[] { dev[1] }); // set freq
                         continue;
                     }
                     else

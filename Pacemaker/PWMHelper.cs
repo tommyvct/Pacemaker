@@ -22,7 +22,7 @@ namespace PWMHelper
         private static DataHandler _dh = new DataHandler();
 
         [STAThread]
-        public static async Task PWM(string[] args)
+        public static void PWM(string[] args)
         {
             int targetPwmFrequency = ParseArguments(args);
             if (targetPwmFrequency == -1)
@@ -35,7 +35,7 @@ namespace PWMHelper
             int currentPwmFrequency = BitConverter.ToInt32(baseData, 4);
             if (targetPwmFrequency == 0)
             {
-                await ShowCurrentFrequency(currentPwmFrequency);
+                //ShowCurrentFrequency(currentPwmFrequency);
                 return;
             }
 
@@ -98,7 +98,7 @@ namespace PWMHelper
             Array.Copy(b, 0, baseData, 4, 4);
         }
 
-        private static async Task ShowCurrentFrequency(int currentFrequency)
+        private static void ShowCurrentFrequency(int currentFrequency)
         {
             //await Pacemaker.Program.Toast("PWM", string.Format(MessageString.CurrentFrequency, currentFrequency));
             MessageBox.Show(string.Format(MessageString.CurrentFrequency, currentFrequency));
